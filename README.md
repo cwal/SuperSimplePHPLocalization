@@ -25,9 +25,7 @@ This will be case sensitive, so cases must match exactly in order to return the 
 Create an en.txt file (if that is default language) with just:
 
 	{
-
 		"lang":"en-ca" 
-	
 	} 
 
 
