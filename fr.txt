@@ -1,0 +1,11 @@
+{
+    "-----DEFAULT-----":"-----DEFAULT-----",
+    "lang":"fr-ca",
+    
+    "-----STRINGS-----":"-----STRINGS-----",
+    "No":"Non",
+    "Yes":"Oui",
+    "or":"ou",
+    
+    "-----EOF-----":"-----EOF-----"
+}
