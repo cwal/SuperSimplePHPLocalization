@@ -10,19 +10,29 @@ Create a /locale folder with lang.php inside and a .txt language file for each l
 Include lang.php on all necessary pages: include('locale/lang.php');
 
 fr.txt should be UTF8 encoded with the following format:
+
 {
+
   "lang":"fr-ca",
+  
   "No":"Non",
+  
   "Yes":"Oui",
+  
   "or":"ou"
+  
 }
 
 This will be case sensitive, so cases must match exactly in order to return the translated phrase.
 
 Create an en.txt file (if that is default language) with just:
+
 {
+
 	"lang":"en-ca" 
+	
 } 
+
 
 There is no need for string translations in the default language.
 If a translation is not found it returns the original phrase.
@@ -48,5 +58,7 @@ For example:
 The string above must be a copy/paste replica in order to return a translation
 
 {
+
   "Please use \"quotation marks\" properly":"S'il vous plaît utiliser les \"guillemets\" correctement" 
+  
 } 
