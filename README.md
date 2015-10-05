@@ -6,8 +6,13 @@ Simply include this script and get translations by adding ?lang=fr to the URL!
 
 Please note that en/fr are used as example languages. The following instructions can be applied to any number of languages.
 
+This script defaults to english (en.txt). You can specify your own default language by defining LANG_DEFAULT before including this script.
+
+	<?php define('LANG_DEFAULT', 'fr'); ?>
+	<?php include('locale/lang.php'); ?>
+
 Create a /locale folder with lang.php inside and a .txt language file for each language.
-Include lang.php on all necessary pages: 
+Include lang.php at the top of all necessary pages: 
 
 	<?php include('locale/lang.php'); ?>
 
