@@ -8,10 +8,10 @@ Please note that en/fr are used as example languages. The following instructions
 
 This script defaults to english (en.txt). You can specify your own default language by defining LANG_DEFAULT before including this script.
 
-	<?php define('LANG_DEFAULT', 'fr'); ?>
-	<?php include('locale/lang.php'); ?>
+	<?php define('LANG_DEFAULT', 'fr'); // only necessary if not using EN as default language ?>
+	<?php include('locale/lang.php'); // must be included on all pages that need translations ?>
 
-Create a /locale folder with lang.php inside and a .txt language file for each language.
+Put the /locale folder (contains lang.php and a .txt language file for each language) at the root of your project.
 Include lang.php at the top of all necessary pages: 
 
 	<?php include('locale/lang.php'); ?>
@@ -36,10 +36,15 @@ Create an en.txt file (if that is default language) with just:
 
 There is no need for string translations in the default language.
 If a translation is not found it returns the original phrase.
+Default language file is useful when you want to use a key to retrieve information, e.g: alt_lang can be defined in EN to return 'fr' and FR to return 'en'.
+You could also use a key for translations to avoid long paragraphs, e.g: 'paragraph_1' in the code but a full paragraph in each translation file.
 
 # SWITCH LANGUAGES
 
-Toggle the language by adding ?lang=fr to the URL
+Toggle the language by adding ?lang=fr to the URL.
+Make use of .htaccess rewrite rules in order to make URL's prettier.
+example.com/?page=about&lang=en --> example.com/about
+example.com/?page=about&lang=fr --> example.com/a-propos
 
 # USING THE TRANSLATIONS
 
