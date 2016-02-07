@@ -50,7 +50,7 @@ defined('INCLUDE_PATH') or define('INCLUDE_PATH', dirname(__FILE__) . '/');
  * Otherwise checks for manually defined language and finally defaults to english
  */
 if(isset($_GET['lang']))
-	define('LANGUAGE', $_GET['lang']);
+	define('LANGUAGE', strtolower($_GET['lang']));
 elseif(defined('LANG_DEFAULT'))
 	define('LANGUAGE', LANG_DEFAULT);
 else
