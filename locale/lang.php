@@ -70,10 +70,14 @@ $translations = get_translations();
 function __($phrase) {
 	global $translations;
 	/* Check if the $phrase exists in the array, otherwise return just $phrase */
-	if(array_key_exists($phrase, $translations))
-		return $translations[$phrase];
-	else
+	if(array_key_exists($phrase, $translations)) {
+		$defined_constant_keys = array_keys(get_defined_constants(true)['user']); // all the user defined keys
+    		$defined_constant_values = array_values(get_defined_constants(true)['user']); // all the user defined values
+    		$translation = $translations[$phrase]; // the translation
+    		return str_replace($defined_constant_keys, $defined_constant_values, $translation); // replace any constants used in translations.php with their defined values
+	} else {
 		return $phrase;
+	}
 }
 
 /*
